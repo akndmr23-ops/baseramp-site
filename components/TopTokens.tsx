@@ -13,7 +13,7 @@ type Row = {
   mcap: number;
 };
 
-export default function TopTokens() {
+export default function TopTokens() { ... }
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(true);
 
