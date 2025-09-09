@@ -1,34 +1,43 @@
-import TrendingNFTs from "./components/TrendingNFTs";
 import TopTokens from "./components/TopTokens";
+import TrendingNFTs from "./components/TrendingNFTs";
+import UpcomingEvents from "./components/UpcomingEvents";
+import Nav from "../components/Nav";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-2xl space-y-6 px-4 py-10">
-      <h1 className="text-3xl font-bold">
-        🚀 BaseRamp — Trend Radar
-      </h1>
-      <p className="text-gray-400">
-        Realtime trends and upcoming events on the Base network.
-      </p>
+    <>
+      <Nav />
+      <main className="mx-auto max-w-4xl space-y-8 px-4 py-10">
+        <div className="text-center space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            🚀 BaseRamp
+          </h1>
+          <p className="text-xl text-gray-300">
+            Your real-time radar for Base network trends
+          </p>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Track the hottest tokens, trending NFT collections, and upcoming events 
+            in the Base ecosystem — all in one place.
+          </p>
+        </div>
 
-      {/* Top 10 Tokens */}
-      <TopTokens />
+        {/* Top 10 Tokens */}
+        <TopTokens />
 
-      {/* Trending NFT */}
-      <div className="rounded-xl border border-white/10 bg-black/40 p-4">
-        <h2 className="text-lg font-semibold">🔥 Trending NFT Collection</h2>
-        <p className="text-gray-400 text-sm">
-          <strong className="text-white">CryptoBullkt</strong> #555 minted out! 🐂✨
-        </p>
-      </div>
+        {/* Trending NFTs */}
+        <TrendingNFTs />
 
-      {/* Upcoming Event */}
-      <div className="rounded-xl border border-white/10 bg-black/40 p-4">
-        <h2 className="text-lg font-semibold">📅 Upcoming Base Event</h2>
-        <p className="text-gray-400 text-sm">
-          Don’t miss <strong className="text-white">BaseCon Istanbul</strong> — Sept 20, 2025.
-        </p>
-      </div>
-    </main>
+        {/* Upcoming Events */}
+        <UpcomingEvents />
+
+        {/* Footer */}
+        <footer className="text-center py-8 border-t border-white/10">
+          <p className="text-gray-400 text-sm">
+            Built with ❤️ for the Base ecosystem • 
+            <a href="/about" className="hover:text-white ml-1">Learn more</a>
+          </p>
+        </footer>
+      </main>
+    </>
   );
 }
