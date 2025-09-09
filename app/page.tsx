@@ -1,5 +1,5 @@
 import TrendingNFTs from "./components/TrendingNFTs";
-import TopTokens from "@/components/TopTokens";
+import TopTokens from "./components/TopTokens";
 
 export default function Home() {
   return (
