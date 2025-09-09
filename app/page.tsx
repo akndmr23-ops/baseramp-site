@@ -1,3 +1,4 @@
+import TopTokens from "@/components/TopTokens";
 import Nav from "../components/Nav";
 
 export default function Page() {
