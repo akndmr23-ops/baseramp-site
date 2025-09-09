@@ -1,13 +1,24 @@
 import TopTokens from "./components/TopTokens";
+import TopLosers from "./components/TopLosers";
 import TrendingNFTs from "./components/TrendingNFTs";
 import UpcomingEvents from "./components/UpcomingEvents";
+import GasTracker from "./components/GasTracker";
+import FearGreedIndex from "./components/FearGreedIndex";
+import MemeOfTheDay from "./components/MemeOfTheDay";
 import Nav from "../components/Nav";
+import AdSlot from "../components/AdSlot";
+import NewsletterSignup from "../components/NewsletterSignup";
 
 export default function Home() {
   return (
     <>
       <Nav />
       <main className="mx-auto max-w-4xl space-y-8 px-4 py-10">
+        {/* Top Banner Ad */}
+        <div className="flex justify-center">
+          <AdSlot size="banner" />
+        </div>
+
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             🚀 BaseRamp
@@ -21,14 +32,38 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Top 10 Tokens */}
-        <TopTokens />
+        <div className="grid lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 space-y-6">
+            {/* Top 10 Tokens */}
+            <TopTokens />
+            
+            {/* Top Losers */}
+            <TopLosers />
+            
+            {/* Trending NFTs */}
+            <TrendingNFTs />
+            
+            {/* Upcoming Events */}
+            <UpcomingEvents />
+          </div>
+          
+          <div className="space-y-6">
+            {/* Sidebar Ad */}
+            <AdSlot size="sidebar" />
+            
+            {/* Gas Tracker */}
+            <GasTracker />
+            
+            {/* Fear & Greed Index */}
+            <FearGreedIndex />
+            
+            {/* Meme of the Day */}
+            <MemeOfTheDay />
+          </div>
+        </div>
 
-        {/* Trending NFTs */}
-        <TrendingNFTs />
-
-        {/* Upcoming Events */}
-        <UpcomingEvents />
+        {/* Newsletter Signup */}
+        <NewsletterSignup />
 
         {/* Footer */}
         <footer className="text-center py-8 border-t border-white/10">
