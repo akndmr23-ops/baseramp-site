@@ -1,11 +1,9 @@
 [build]
-  # pnpm ile kur → build
-  command = "corepack enable && pnpm i --frozen-lockfile && pnpm build"
+  command = "npm ci && npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
 
-# Next.js runtime
 [[plugins]]
   package = "@netlify/plugin-nextjs"
